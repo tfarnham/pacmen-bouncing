@@ -1,9 +1,3 @@
-let pos = 0;
-const pacArray = [
-  ['./images/PacMan1.png', './images/PacMan2.png'],
-  ['./images/PacMan3.png', './images/PacMan4.png'],
-];
-let direction = 0;
 const pacMen = []; // This array holds all the pacmen
 
 // This function returns an object with random values
@@ -17,7 +11,7 @@ function setToRandom(scale) {
 // Factory to make a PacMan at a random position with random velocity
 function makePac() {
   // returns an object with random values scaled {x: 33, y: 21}
-  let velocity = setToRandom(10); // {x:?, y:?}
+  let velocity = setToRandom(10);
   let position = setToRandom(200);
 
   // Add image to div id = game
@@ -57,7 +51,7 @@ function update() {
 }
 
 function checkCollisions(item) {
-  // TODO: detect collision with all walls and make pacman bounce
+  // Detect collision with all walls and make Pacman bounce
   if(item.position.x + item.velocity.x + item.newimg.width > window.innerWidth ||
   item.position.x + item.velocity.x < 0){
     item.velocity.x = -1*item.velocity.x;
@@ -69,6 +63,7 @@ function checkCollisions(item) {
 }
 
 function toggleImage(item) {
+    // Switch between animation frames for left and right Pacmen
     let itemFilename = item.newimg.src.replace(/^.*[\\\/]/, '');
     console.log(itemFilename);
     if(item.velocity.x > 0){
@@ -92,9 +87,4 @@ function toggleImage(item) {
 
 function makeOne() {
   pacMen.push(makePac()); // add a new PacMan
-}
-
-//don't change this line
-if (typeof module !== 'undefined') {
-  module.exports = { checkCollisions, update, pacMen };
 }

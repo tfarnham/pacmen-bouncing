@@ -46,13 +46,14 @@ function update() {
   // loop over pacmen array and move each one and move image in DOM
   pacMen.forEach((item) => {
     checkCollisions(item);
+    toggleImage(item);
     item.position.x += item.velocity.x;
     item.position.y += item.velocity.y;
 
     item.newimg.style.left = item.position.x;
     item.newimg.style.top = item.position.y;
   });
-  setTimeout(update, 20);
+  setTimeout(update, 30);
 }
 
 function checkCollisions(item) {
@@ -65,6 +66,28 @@ function checkCollisions(item) {
   item.position.y + item.velocity.y < 0){
     item.velocity.y = -1*item.velocity.y;
   }
+}
+
+function toggleImage(item) {
+    let itemFilename = item.newimg.src.replace(/^.*[\\\/]/, '');
+    console.log(itemFilename);
+    if(item.velocity.x > 0){
+        // Switch between 1 and 2 if going to the right
+        if (itemFilename == 'PacMan1.png'){
+            item.newimg.src = './images/PacMan2.png';
+        }
+        else {
+            item.newimg.src = './images/PacMan1.png';
+        }
+    }
+    else {
+        if (itemFilename == 'PacMan3.png'){
+            item.newimg.src = './images/PacMan4.png';
+        }
+        else {
+            item.newimg.src = './images/PacMan3.png';
+        }
+    }
 }
 
 function makeOne() {

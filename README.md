@@ -1,20 +1,20 @@
 # Pacmen Bouncing
-Tracking of MBTA 1 Busses between MIT and Harvard
+Spawn PacMan figures with random trajectory that bounce off the edges of your browser window
 
-![Screenshot of map](demo.png)
+![Screenshot of PacMen](demo.png)
 
 ## Description of the project
-Pulls GPS locations for Route 1 busses from the Massachusetts Bay Transportation Authority (MBTA). Busses are color-coded depending on direction, with <span style="color:blue">blue busses headed South</span> and <span style="color:red">red busses headed North</span>. Occupancy status (how full the bus is) is available by clicking the marker.
+Each PacMan has a random velocity (in x and y) and its position is updated each time update() is called. On update, each PacMan is checked for collision against the boundary walls of the browser window and the appearnance features a two frame looped animation that depends on whether it faces left or right.
 
-Bus locations are automatically updated every 15 seconds.
+This exercise showcases control over the DOM, adjusting CSS parameters with Javascript, and Javascript basics (functions, arrays, loops, and conditionals)
 
 ## How to Run
 Download all files then open index.html in your browser
 
 ## Roadmap of future improvements
-Occupancy status can be shown via changing the opacity of the marker
+Create a "Slow down" function to remove the extra iterators created by "Speed Up"
 
-Showing "time until the next bus arrives" for each of the bus stops
+Refine animation with more than just the two frames
 
 ## License
 

@@ -12,7 +12,7 @@ This exercise showcases control over the DOM, adjusting CSS parameters with Java
 Download all files then open index.html in your browser
 
 ## Roadmap of future improvements
-Nice next steps inclide: 
+Nice next steps include: 
 
 - Creating a "Slow down" function to remove the extra iterators created by "Speed Up"
 

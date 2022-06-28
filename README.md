@@ -12,9 +12,13 @@ This exercise showcases control over the DOM, adjusting CSS parameters with Java
 Download all files then open index.html in your browser
 
 ## Roadmap of future improvements
-Create a "Slow down" function to remove the extra iterators created by "Speed Up"
+Nice next steps inclide: 
 
-Refine animation with more than just the two frames
+- Creating a "Slow down" function to remove the extra iterators created by "Speed Up"
+
+- Refining the animation to have more than just the two frames
+
+- Rotating the images to be in line with the direction (up/down) that each PacMan is going
 
 ## License
 
